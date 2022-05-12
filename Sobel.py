@@ -13,8 +13,9 @@ class Sobel:
         self.Gy = np.array([[1., 2., 1.],
                             [0., 0., 0.],
                             [-1., -2., -1.]])
-
-    def convolve(self, mat1, mat2):
+    
+    @staticmethod
+    def convolve(mat1, mat2):
         return (mat1 * mat2).sum()
 
     def __call__(self, img):
