@@ -9,8 +9,9 @@ class GaussianBlur:
         self.kernel = (1/16) * np.array([[1., 2., 1.],
                                          [2., 4., 2.],
                                          [1., 2., 1.]])
-
-    def convolve(self, mat1, mat2):
+        
+    @staticmethod
+    def convolve(mat1, mat2):
         return (mat1 * mat2).sum()
 
     def __call__(self, img):
